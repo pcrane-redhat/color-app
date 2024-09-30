@@ -5,6 +5,8 @@ import socket
 import random
 import os
 
+
+
 app = Flask(__name__)
 
 color_codes = {
@@ -17,9 +19,9 @@ color_codes = {
     "purple": "#7d3c98"
 }
 
-color = os.environ.get('APP_COLOR') or random.choice(["red","green"])
+#color = os.environ.get('APP_COLOR') or random.choice(["red","green"])
 #color = os.environ.get('APP_COLOR') or random.choice(["white"])
-#color = os.environ.get('APP_COLOR') or random.choice(["pink","blue","yellow"])
+color = os.environ.get('APP_COLOR') or random.choice(["pink","blue","yellow"])
 
 @app.route("/")
 def main():
